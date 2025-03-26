@@ -1,0 +1,88 @@
+// Importa las variables
+@use 'variables';
+@import 'mixins';
+
+// Footer Styles
+.footer {
+    background-color: $primary-color; /* Fondo oscuro */
+    color: $white-color; /* Texto blanco */
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 120px; /* Tamaño logo */
+    height: auto;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: $white-color;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: $highlight-color; /* Amarillo cálido */
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-icon {
+    color: $white-color;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icon:hover {
+    color: $highlight-color; /* Amarillo cálido */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: $secondary-color; /* Verde pasto */
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
