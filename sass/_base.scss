@@ -1,0 +1,19 @@
+@use 'variables' as v; /* Usar el alias 'v' para acceder a las variables */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: v.$header-bg-color; /* Usar 'v.$primary-color' para acceder a la variable */
+  color: v.$primary-color; /* Lo mismo aquí */
+}
+
+img {
+  max-width: 100%;
+}

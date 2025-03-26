@@ -1,0 +1,82 @@
+// _header.scss
+@import 'mixins';
+@import 'variables';
+
+header {
+  @include header-base;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: $primary-color !important;
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 20px;
+  color: $light-gray;
+  display: block;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu .navbar ul li a:hover {
+  color: $secondary-color;
+}
+
+.menu .navbar ul li a:active {
+  color: $secondary-color;
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 37px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.header-txt {
+  text-align: center;
+  padding: 40px 150px;
+}
+
+.header-txt h1 {
+  font-size: 55px;
+  line-height: 1;
+  color: $primary-color;
+  margin-bottom: 25px;
+  font-weight: 900;
+}
+
+span {
+  color: $secondary-color;
+}
+
+p {
+  font-size: 17px;
+  color: $light-gray;
+  margin-bottom: 35px;
+}

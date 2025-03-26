@@ -1,0 +1,292 @@
+@charset "UTF-8";
+/* Estilos generales */
+/* Azul oscuro */
+/* Verde pasto */
+/* Fondo claro */
+/* Fondo del header */
+/* Blanco */
+/* Gris claro */
+/* Amarillo cálido */
+/* Azul oscuro */
+/* Verde pasto */
+/* Fondo claro */
+/* Fondo del header */
+/* Blanco */
+/* Gris claro */
+/* Amarillo cálido */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+/* Azul oscuro */
+/* Verde pasto */
+/* Fondo claro */
+/* Fondo del header */
+/* Blanco */
+/* Gris claro */
+/* Amarillo cálido */
+.btn-1 {
+  padding: 11px 35px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 2px solid rgb(44, 62, 80);
+  background-color: transparent;
+  color: rgb(44, 62, 80);
+  transition: all 0.3s ease;
+}
+
+.btn-1:hover {
+  background-color: rgb(44, 62, 80);
+  color: rgb(255, 255, 255);
+}
+
+/* Usar el alias 'v' para acceder a las variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(236, 240, 241); /* Usar 'v.$primary-color' para acceder a la variable */
+  color: rgb(44, 62, 80); /* Lo mismo aquí */
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Azul oscuro */
+/* Verde pasto */
+/* Fondo claro */
+/* Fondo del header */
+/* Blanco */
+/* Gris claro */
+/* Amarillo cálido */
+header {
+  background-color: rgb(236, 240, 241);
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 80px 0;
+  border-bottom-left-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: rgb(44, 62, 80) !important;
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 20px;
+  color: rgb(189, 195, 199);
+  display: block;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu .navbar ul li a:hover {
+  color: rgb(26, 188, 156);
+}
+
+.menu .navbar ul li a:active {
+  color: rgb(26, 188, 156);
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 37px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.header-txt {
+  text-align: center;
+  padding: 40px 150px;
+}
+
+.header-txt h1 {
+  font-size: 55px;
+  line-height: 1;
+  color: rgb(44, 62, 80);
+  margin-bottom: 25px;
+  font-weight: 900;
+}
+
+span {
+  color: rgb(26, 188, 156);
+}
+
+p {
+  font-size: 17px;
+  color: rgb(189, 195, 199);
+  margin-bottom: 35px;
+}
+
+/* Azul oscuro */
+/* Verde pasto */
+/* Fondo claro */
+/* Fondo del header */
+/* Blanco */
+/* Gris claro */
+/* Amarillo cálido */
+.card {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: rgb(26, 188, 156);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: rgb(44, 62, 80);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card p {
+  color: rgb(189, 195, 199);
+  font-size: 16px;
+}
+
+.card a {
+  color: rgb(44, 62, 80);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: rgb(243, 156, 18);
+}
+
+/* Azul oscuro */
+/* Verde pasto */
+/* Fondo claro */
+/* Fondo del header */
+/* Blanco */
+/* Gris claro */
+/* Amarillo cálido */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline-item .timeline-content {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  position: relative;
+}
+.timeline-item .timeline-content.odd {
+  text-align: right;
+  left: -20%;
+}
+.timeline-item .timeline-content.even {
+  text-align: left;
+  right: -20%;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .timeline-content {
+    width: 80%;
+    text-align: left;
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
+/* galeria.scss */
+/* Estilos para la galería */
+.column {
+  flex: 1 1 22%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.column img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación al hacer hover sobre las imágenes */
+.column img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .column {
+    flex: 1 1 48%;
+  }
+}
+@media (max-width: 480px) {
+  .column {
+    flex: 1 1 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,62 @@
+// _timeline.scss
+@import 'variables';
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+  
+  .timeline-content {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    position: relative;
+    
+    &.odd {
+      text-align: right;
+      left: -20%;
+    }
+
+    &.even {
+      text-align: left;
+      right: -20%;
+    }
+  }
+}
+
+@include respond('medium') {
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-content {
+    width: 80%;
+    text-align: left;
+    left: 0 !important;
+    right: 0 !important;
+  }
+}

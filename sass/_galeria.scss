@@ -1,0 +1,43 @@
+/* galeria.scss */
+
+/* Estilos para la galería */
+@mixin row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .column {
+    flex: 1 1 22%;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .column img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Animación al hacer hover sobre las imágenes */
+  .column img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .column {
+      flex: 1 1 48%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .column {
+      flex: 1 1 100%;
+    }
+  }
+  
+  

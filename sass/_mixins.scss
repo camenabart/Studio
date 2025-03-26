@@ -1,0 +1,31 @@
+// _mixins.scss
+@mixin header-base {
+    background-color: $header-bg-color;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 80px 0;
+    border-bottom-left-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    position: relative;
+  }
+
+  @mixin row{
+    display: flex;
+     flex-wrap: wrap;
+     gap: 15px;
+  }
+  
+  @mixin respond($breakpoint) {
+    @if $breakpoint == 'small' {
+      @media (max-width: 600px) {
+        @content;
+      }
+    }
+    @else if $breakpoint == 'medium' {
+      @media (max-width: 768px) {
+        @content;
+      }
+    }
+  }
+  

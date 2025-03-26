@@ -1,0 +1,15 @@
+/* Estilos generales */
+// styles.scss
+@use 'buttons' as *; // Usar sin prefijo
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'header';
+@import 'cards';
+@import 'timeline';
+@import 'galeria';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+
+
