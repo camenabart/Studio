@@ -3,15 +3,18 @@
 @use 'variables' as *;
 
 @mixin header-base {
-    background-color: $header-bg-color;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    padding: 80px 0;
-    border-bottom-right-radius: 50% 50%;
-    position: relative;
-  }
-
+  background-color: $header-bg-color;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrado horizontal */
+  min-height: 100vh;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-bottom-left-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+}
   @mixin row{
     display: flex;
      flex-wrap: wrap;
