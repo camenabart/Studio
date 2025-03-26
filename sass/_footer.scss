@@ -65,7 +65,6 @@
 .footer-bottom {
     text-align: center;
     padding: 20px 0;
-    background-color: $secondary-color; /* Verde pasto */
     font-size: 14px;
 }
 
@@ -86,4 +85,78 @@
     .footer-social {
         justify-content: center;
     }
+}
+
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #1abc9c; /* Color similar al verde usado anteriormente */
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social-icon {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icon:hover {
+    color: #1abc9c;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.footer-logo img {
+    width: 80px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+
+.texto footer{
+    p {
+        font-size: 17px;
+        color: white;
+        margin-bottom: 35px;
+      }
+      
 }
