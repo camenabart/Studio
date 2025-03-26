@@ -1,5 +1,5 @@
 // _buttons.scss
-@import 'variables';
+@use 'variables' as *;
 
 %btn-base {
   padding: 11px 35px;
@@ -22,3 +22,11 @@
   color: $white-color;
 }
 
+a.btn-1 {
+  @extend %btn-base;
+}
+
+a.btn-1:hover {
+  background-color: $primary-color;
+  color: $white-color;
+}
