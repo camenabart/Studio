@@ -1,5 +1,7 @@
 // _timeline.scss
-@import 'variables';
+@use 'variables' as *;
+@use 'mixins' as *;
+
 
 .timeline {
   display: flex;

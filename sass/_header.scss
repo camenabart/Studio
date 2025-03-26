@@ -1,6 +1,6 @@
-// _header.scss
-@import 'mixins';
-@import 'variables';
+@use 'mixins' as *;
+@use 'variables' as *;
+
 
 header {
   @include header-base;

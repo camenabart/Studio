@@ -1,19 +1,4 @@
 @charset "UTF-8";
-/* Estilos generales */
-/* Azul oscuro */
-/* Verde pasto */
-/* Fondo claro */
-/* Fondo del header */
-/* Blanco */
-/* Gris claro */
-/* Amarillo cálido */
-/* Azul oscuro */
-/* Verde pasto */
-/* Fondo claro */
-/* Fondo del header */
-/* Blanco */
-/* Gris claro */
-/* Amarillo cálido */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 /* Azul oscuro */
 /* Verde pasto */
@@ -22,23 +7,6 @@
 /* Blanco */
 /* Gris claro */
 /* Amarillo cálido */
-.btn-1 {
-  padding: 11px 35px;
-  border-radius: 5px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 16px;
-  border: 2px solid rgb(44, 62, 80);
-  background-color: transparent;
-  color: rgb(44, 62, 80);
-  transition: all 0.3s ease;
-}
-
-.btn-1:hover {
-  background-color: rgb(44, 62, 80);
-  color: rgb(255, 255, 255);
-}
-
 /* Usar el alias 'v' para acceder a las variables */
 * {
   margin: 0;
@@ -58,13 +26,6 @@ img {
   max-width: 100%;
 }
 
-/* Azul oscuro */
-/* Verde pasto */
-/* Fondo claro */
-/* Fondo del header */
-/* Blanco */
-/* Gris claro */
-/* Amarillo cálido */
 header {
   background-color: rgb(236, 240, 241);
   display: flex;
@@ -151,56 +112,38 @@ p {
   margin-bottom: 35px;
 }
 
-/* Azul oscuro */
-/* Verde pasto */
-/* Fondo claro */
-/* Fondo del header */
-/* Blanco */
-/* Gris claro */
-/* Amarillo cálido */
-.card {
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+/* Estilos para las tarjetas de proyecto */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Transición para el agrandado */
+  display: block;
+}
+.project-card:hover {
+  transform: scale(1.05); /* Agrandar al pasar el mouse */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el área */
+  display: block;
 }
 
-.card:hover {
-  background-color: rgb(26, 188, 156);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-title {
-  color: rgb(44, 62, 80);
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.card p {
-  color: rgb(189, 195, 199);
-  font-size: 16px;
-}
-
-.card a {
-  color: rgb(44, 62, 80);
+/* Estilos adicionales para la animación */
+.project-card a {
+  display: block;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
 }
 
-.card a:hover {
-  color: rgb(243, 156, 18);
+/* Responsividad */
+@media (max-width: 768px) {
+  .project-card {
+    margin-bottom: 20px;
+  }
 }
-
-/* Azul oscuro */
-/* Verde pasto */
-/* Fondo claro */
-/* Fondo del header */
-/* Blanco */
-/* Gris claro */
-/* Amarillo cálido */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -286,6 +229,87 @@ p {
 @media (max-width: 480px) {
   .column {
     flex: 1 1 100%;
+  }
+}
+.footer {
+  background-color: rgb(44, 62, 80); /* Fondo oscuro */
+  color: rgb(255, 255, 255); /* Texto blanco */
+  padding: 40px 0;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  width: 120px; /* Tamaño logo */
+  height: auto;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: rgb(243, 156, 18); /* Amarillo cálido */
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social-icon {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-social-icon:hover {
+  color: rgb(243, 156, 18); /* Amarillo cálido */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgb(26, 188, 156); /* Verde pasto */
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-links ul {
+    text-align: center;
+  }
+  .footer-social {
+    justify-content: center;
   }
 }
 

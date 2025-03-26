@@ -1,5 +1,6 @@
 // _cards.scss
-@import 'variables';
+@use 'variables' as *;
+
 
 /* Estilos para las tarjetas de proyecto */
 .project-card {

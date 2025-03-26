@@ -1,4 +1,7 @@
 // _mixins.scss
+
+@use 'variables' as *;
+
 @mixin header-base {
     background-color: $header-bg-color;
     display: flex;
