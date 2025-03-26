@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
-/* Azul oscuro */
-/* Verde pasto */
-/* Fondo claro */
-/* Fondo del header */
-/* Blanco */
-/* Gris claro */
-/* Amarillo cálido */
+/* Azul oscuro elegante */
+/* Verde esmeralda vibrante */
+/* Fondo claro y suave */
+/* Fondo suave para el header */
+/* Blanco puro */
+/* Gris suave y moderno */
+/* Amarillo dorado sofisticado */
 /* Usar el alias 'v' para acceder a las variables */
 * {
   margin: 0;
@@ -32,7 +32,6 @@ header {
   align-items: center;
   min-height: 100vh;
   padding: 80px 0;
-  border-bottom-left-radius: 50% 50%;
   border-bottom-right-radius: 50% 50%;
   position: relative;
 }
@@ -120,6 +119,11 @@ p {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease; /* Transición para el agrandado */
   display: block;
+  /* Efecto al hacer hover */
+  /* Imagen dentro de la tarjeta */
+  /* Capa de fondo oscura que aparece al hacer hover */
+  /* Texto dentro de la capa */
+  /* Mostrar el overlay al hacer hover */
 }
 .project-card:hover {
   transform: scale(1.05); /* Agrandar al pasar el mouse */
@@ -127,21 +131,49 @@ p {
 }
 .project-card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra todo el área */
+  height: 200px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra todo el área sin distorsionarse */
   display: block;
 }
+.project-card .project-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.project-card .project-card-text {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.project-card:hover .project-card-overlay {
+  opacity: 1;
+}
 
-/* Estilos adicionales para la animación */
+/* Estilos adicionales para el enlace */
 .project-card a {
   display: block;
   text-decoration: none;
 }
 
-/* Responsividad */
+/* Espaciado entre las tarjetas */
+/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
   .project-card {
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .project-card {
+    margin-bottom: 10px;
   }
 }
 .timeline {
@@ -198,37 +230,51 @@ p {
     right: 0 !important;
   }
 }
-/* galeria.scss */
 /* Estilos para la galería */
 .column {
-  flex: 1 1 22%;
+  flex: 1 1 22%; /* Proporción de las columnas */
   padding: 0;
   overflow: hidden;
+  position: relative;
+  margin-bottom: 20px; /* Asegura espacio entre las filas */
 }
 
+/* Añadir mayor espacio entre columnas */
+@media (min-width: 768px) {
+  .column {
+    margin-right: 20px; /* Espacio entre las columnas */
+  }
+  /* Para evitar margen extra al final de la última columna */
+  .column:last-child {
+    margin-right: 0;
+  }
+}
 .column img {
   width: 100%;
   display: block;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  border-radius: 12px; /* Bordes más suaves */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover; /* Asegura que las imágenes cubran bien el espacio */
+  margin-bottom: 20px; /* Añadir espacio inferior entre las imágenes */
 }
 
-/* Animación al hacer hover sobre las imágenes */
-.column img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+/* Media query para pantallas medianas */
+@media (max-width: 1024px) {
+  .column {
+    flex: 1 1 30%; /* Tres columnas en pantallas medianas */
+  }
 }
-
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .column {
-    flex: 1 1 48%;
+    flex: 1 1 48%; /* Dos columnas en pantallas más pequeñas */
+    margin-right: 0; /* Eliminar margen entre columnas */
   }
 }
+/* Media query para pantallas muy pequeñas */
 @media (max-width: 480px) {
   .column {
-    flex: 1 1 100%;
+    flex: 1 1 100%; /* Una columna en pantallas móviles */
   }
 }
 .footer {

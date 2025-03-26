@@ -1,43 +1,58 @@
-/* galeria.scss */
-
 /* Estilos para la galería */
 @mixin row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Aumenta el espacio entre columnas e imágenes */
+}
+
+.column {
+  flex: 1 1 22%; /* Proporción de las columnas */
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px; /* Asegura espacio entre las filas */
+}
+
+/* Añadir mayor espacio entre columnas */
+@media (min-width: 768px) {
   .column {
-    flex: 1 1 22%;
-    padding: 0;
-    overflow: hidden;
+    margin-right: 20px; /* Espacio entre las columnas */
   }
-  
-  .column img {
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Para evitar margen extra al final de la última columna */
+  .column:last-child {
+    margin-right: 0;
   }
-  
-  /* Animación al hacer hover sobre las imágenes */
-  .column img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.column img {
+  width: 100%;
+  display: block;
+  border-radius: 12px; /* Bordes más suaves */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover; /* Asegura que las imágenes cubran bien el espacio */
+  margin-bottom: 20px; /* Añadir espacio inferior entre las imágenes */
+}
+
+
+/* Media query para pantallas medianas */
+@media (max-width: 1024px) {
+  .column {
+    flex: 1 1 30%; /* Tres columnas en pantallas medianas */
   }
-  
-  /* Media query para pantallas pequeñas */
-  @media (max-width: 768px) {
-    .column {
-      flex: 1 1 48%;
-    }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .column {
+    flex: 1 1 48%; /* Dos columnas en pantallas más pequeñas */
+    margin-right: 0; /* Eliminar margen entre columnas */
   }
-  
-  @media (max-width: 480px) {
-    .column {
-      flex: 1 1 100%;
-    }
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .column {
+    flex: 1 1 100%; /* Una columna en pantallas móviles */
   }
-  
-  
+}

@@ -1,7 +1,5 @@
 // _cards.scss
 @use 'variables' as *;
-
-
 /* Estilos para las tarjetas de proyecto */
 .project-card {
   position: relative;
@@ -11,28 +9,66 @@
   transition: transform 0.3s ease;  /* Transición para el agrandado */
   display: block;
 
+  /* Efecto al hacer hover */
   &:hover {
       transform: scale(1.05); /* Agrandar al pasar el mouse */
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
   }
 
+  /* Imagen dentro de la tarjeta */
   img {
       width: 100%;
-      height: 100%;
-      object-fit: cover; /* Asegura que la imagen cubra todo el área */
+      height: 200px; /* Altura fija para todas las imágenes */
+      object-fit: cover; /* Asegura que la imagen cubra todo el área sin distorsionarse */
       display: block;
+  }
+
+  /* Capa de fondo oscura que aparece al hacer hover */
+  .project-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+  }
+
+  /* Texto dentro de la capa */
+  .project-card-text {
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+  }
+
+  /* Mostrar el overlay al hacer hover */
+  &:hover .project-card-overlay {
+      opacity: 1;
   }
 }
 
-/* Estilos adicionales para la animación */
+/* Estilos adicionales para el enlace */
 .project-card a {
   display: block;
   text-decoration: none;
 }
 
-/* Responsividad */
+/* Espaciado entre las tarjetas */
+
+/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
   .project-card {
       margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+      margin-bottom: 10px;
   }
 }
