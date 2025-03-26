@@ -340,6 +340,36 @@ a.btn-1:hover {
   height: auto;
 }
 
+/* Usar el alias 'v' para acceder a las variables */
+/* Animación para la imagen sin necesidad de modificar el HTML */
+#mi-foto {
+  opacity: 0; /* Comienza invisible */
+  transform: translateY(50px); /* Comienza más abajo */
+  animation: fadeInUp 1.5s ease-out forwards; /* Aplica la animación */
+}
+
+/* Definición de la animación */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Comienza desde abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Termina en su posición original */
+  }
+}
+/* Optimización para dispositivos móviles */
+@media (max-width: 768px) {
+  #mi-foto {
+    animation: fadeInUp 1.2s ease-out forwards;
+  }
+}
+@media (max-width: 480px) {
+  #mi-foto {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+}
 .header {
   background-color: rgb(255, 255, 255);
   display: flex;

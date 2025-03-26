@@ -1,5 +1,6 @@
 @use 'variables' as *; 
 @use 'bottons' as *;
+@use 'animaciones' as *;
 
 
 .project-card {
@@ -137,8 +138,6 @@
     max-width: 100%;
     height: auto;
 }
-
-
 
 /* Animación para la imagen sin necesidad de modificar el HTML */
 #mi-foto {
