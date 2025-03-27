@@ -11,8 +11,14 @@
 }
 
 #mi-foto {
-  opacity: 1; /* Inicialmente invisible */
+  width: 450px; /* Tamaño de la imagen */
+  height: 450px; /* Aseguramos que la imagen sea cuadrada */
+  opacity: 0; /* Inicialmente invisible */
   transform: translateY(100px); /* Se posiciona más abajo */
-  animation: fadeInUp linear both;
-  animation-timeline: view(); /* Se activa cuando entra en pantalla */
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
+  animation: fadeInUp 1.5s ease-out forwards; /* Aplicar animación */
+  
+  border: 5px solid #1abc9c; /* Borde grueso de color azul */
+
 }

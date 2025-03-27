@@ -18,8 +18,15 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(236, 240, 241); /* Usar 'v.$primary-color' para acceder a la variable */
-  color: rgb(44, 62, 80); /* Lo mismo aquí */
+  background-color: rgb(236, 240, 241);
+  color: rgb(44, 62, 80);
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transición suave */
+}
+
+/* Puedes añadir una clase para cambiar el fondo y el color cuando se active un evento */
+body.dark-mode {
+  background-color: rgb(44, 62, 80); /* Color oscuro de fondo */
+  color: rgb(236, 240, 241); /* Color claro de texto */
 }
 
 img {
@@ -549,10 +556,14 @@ a.btn-1:hover {
   }
 }
 #mi-foto {
-  opacity: 1; /* Inicialmente invisible */
+  width: 450px; /* Tamaño de la imagen */
+  height: 450px; /* Aseguramos que la imagen sea cuadrada */
+  opacity: 0; /* Inicialmente invisible */
   transform: translateY(100px); /* Se posiciona más abajo */
-  animation: fadeInUp linear both;
-  animation-timeline: view(); /* Se activa cuando entra en pantalla */
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
+  animation: fadeInUp 1.5s ease-out forwards; /* Aplicar animación */
+  border: 5px solid #1abc9c; /* Borde grueso de color azul */
 }
 
 .gustos {
@@ -679,6 +690,12 @@ a.btn-1:hover {
   color: #fff;
   border-color: #0d6efd;
   transform: scale(1.1); /* Hacer el botón un poco más grande */
+}
+
+.estudios {
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 /*# sourceMappingURL=styles.css.map */

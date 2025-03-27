@@ -149,3 +149,10 @@
     transform: scale(1.1); /* Hacer el botón un poco más grande */
   }
 }
+
+
+.estudios{
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
