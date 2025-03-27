@@ -1,34 +1,18 @@
 @use 'variables' as v; /* Usar el alias 'v' para acceder a las variables */
-
-
-/* Animación para la imagen sin necesidad de modificar el HTML */
-#mi-foto {
-  opacity: 0; /* Comienza invisible */
-  transform: translateY(50px);  /* Comienza más abajo */
-  animation: fadeInUp 1.5s ease-out forwards; /* Aplica la animación */
-}
-
-/* Definición de la animación */
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px); /* Comienza desde abajo */
+  from {
+    opacity: 0.8;
+    transform: translateY(50px);
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translateY(0); /* Termina en su posición original */
+    transform: translateY(0px);
   }
 }
 
-/* Optimización para dispositivos móviles */
-@media (max-width: 768px) {
-  #mi-foto {
-    animation: fadeInUp 1.2s ease-out forwards;
-  }
-}
-
-@media (max-width: 480px) {
-  #mi-foto {
-    animation: fadeInUp 1s ease-out forwards;
-  }
+#mi-foto {
+  opacity: 1; /* Inicialmente invisible */
+  transform: translateY(100px); /* Se posiciona más abajo */
+  animation: fadeInUp linear both;
+  animation-timeline: view(); /* Se activa cuando entra en pantalla */
 }
