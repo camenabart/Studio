@@ -5,3 +5,63 @@
   max-width: 50%;
     height: auto;
 }
+
+.header1 {
+    background-color: rgb(236, 240, 241);
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-bottom-left-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    min-height: 20vh;
+  
+}
+
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // Tres columnas de igual tamaño
+  gap: 20px;
+  padding: 20px;
+}
+
+.columna {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna img {
+  width: 100%;
+  height: auto;
+  max-width: 10000px; // Ajusta según necesidad
+  border-radius: 10px;
+  object-fit: cover; // Recorta la imagen para mantener la proporción
+}
+
+
+//BICE
+
+
+.figma-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Ajusta según necesidad */
+}
+
+
+//Emokey
+.video-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente si es necesario */
+}
