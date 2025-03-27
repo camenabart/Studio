@@ -18,15 +18,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(236, 240, 241);
-  color: rgb(44, 62, 80);
-  transition: background-color 0.5s ease, color 0.5s ease; /* Transición suave */
-}
-
-/* Puedes añadir una clase para cambiar el fondo y el color cuando se active un evento */
-body.dark-mode {
-  background-color: rgb(44, 62, 80); /* Color oscuro de fondo */
-  color: rgb(236, 240, 241); /* Color claro de texto */
+  background-color: rgb(236, 240, 241); /* Usar 'v.$primary-color' para acceder a la variable */
+  color: rgb(44, 62, 80); /* Lo mismo aquí */
 }
 
 img {
@@ -563,7 +556,7 @@ a.btn-1:hover {
   border-radius: 50%; /* Hace la imagen redonda */
   object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
   animation: fadeInUp 1.5s ease-out forwards; /* Aplicar animación */
-  border: 5px solid #1abc9c; /* Borde grueso de color azul */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
 }
 
 .gustos {

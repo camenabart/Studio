@@ -18,7 +18,7 @@
   border-radius: 50%; /* Hace la imagen redonda */
   object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
   animation: fadeInUp 1.5s ease-out forwards; /* Aplicar animación */
-  
-  border: 5px solid #1abc9c; /* Borde grueso de color azul */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+
 
 }
