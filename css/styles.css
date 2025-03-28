@@ -7,23 +7,12 @@
 /* Blanco puro */
 /* Gris suave y moderno */
 /* Amarillo dorado sofisticado */
-header {
-  background-color: rgb(236, 240, 241);
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centrado horizontal */
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  border-bottom-left-radius: 50% 50%;
-  border-bottom-right-radius: 50% 50%;
-  transition: all 0.6s ease-in-out;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
-  background-color: rgb(255, 255, 255);
-  min-height: 60vh;
-  padding: 80px 0px 60px;
+@media (max-width: 400px) {
+  .py-5 {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
 }
-
 /* Usar el alias 'v' para acceder a las variables */
 * {
   margin: 0;
@@ -66,7 +55,6 @@ header {
   transition: all 0.6s ease-in-out;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
   background-color: rgb(255, 255, 255);
-  min-height: 60vh;
   padding: 80px 0px 60px;
 }
 
@@ -157,7 +145,7 @@ p {
     margin-bottom: 10px;
   }
   span {
-    font-size: 16px; /* Reducir tamaño del span */
+    font-size: 30px; /* Reducir tamaño del span */
   }
   p {
     font-size: 14px; /* Reducir tamaño del párrafo */
@@ -590,6 +578,13 @@ a.btn-1, .btn-1 {
   color: rgb(44, 62, 80);
   transition: all 0.3s ease;
 }
+@media (max-width: 400px) {
+  a.btn-1, .btn-1 {
+    padding: 8px 20px; /* Reducir el padding */
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    border: 2px solid rgb(44, 62, 80); /* Mantener el borde */
+  }
+}
 
 .btn-1:hover {
   background-color: rgb(44, 62, 80);
@@ -722,6 +717,14 @@ a.btn-1:hover {
   animation: fadeInUp 1.5s ease-out forwards; /* Aplicar animación */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
 }
+@media (max-width: 400px) {
+  #mi-foto {
+    width: 280px; /* Reduce el tamaño de la imagen */
+    height: 280px; /* Mantiene la imagen cuadrada */
+    transform: translateY(50px); /* Ajusta la posición para que no se vea demasiado abajo */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16); /* Reduce el sombreado para una apariencia más ligera */
+  }
+}
 
 .gustos {
   padding: 50px;
@@ -848,11 +851,29 @@ a.btn-1:hover {
   border-color: #0d6efd;
   transform: scale(1.1); /* Hacer el botón un poco más grande */
 }
+@media (max-width: 400px) {
+  .estudios {
+    border-top-left-radius: 0% 0%;
+    border-top-right-radius: 0% 0%;
+    font-size: 0.5rem;
+  }
+  .estudios h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: rgb(44, 62, 80);
+  }
+}
 
 .estudios {
   border-top-left-radius: 50% 50%;
   border-top-right-radius: 50% 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+@media (max-width: 400px) {
+  .estudios {
+    border-top-left-radius: 0% 0%;
+    border-top-right-radius: 0% 0%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

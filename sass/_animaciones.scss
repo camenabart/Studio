@@ -20,5 +20,12 @@
   animation: fadeInUp 1.5s ease-out forwards; /* Aplicar animación */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
 
+  @media (max-width: 400px) {
+    width: 280px; /* Reduce el tamaño de la imagen */
+    height: 280px; /* Mantiene la imagen cuadrada */
+    transform: translateY(50px); /* Ajusta la posición para que no se vea demasiado abajo */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16); /* Reduce el sombreado para una apariencia más ligera */
+  }
 
 }
+
