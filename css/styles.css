@@ -144,8 +144,8 @@ p {
     font-size: 30px; /* Reducir tamaño del título */
     margin-bottom: 10px;
   }
-  span {
-    font-size: 30px; /* Reducir tamaño del span */
+  .sobremi {
+    font-size: 30px;
   }
   p {
     font-size: 14px; /* Reducir tamaño del párrafo */
@@ -661,7 +661,6 @@ a.btn-1:hover {
 
 .animacion-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 20px;
