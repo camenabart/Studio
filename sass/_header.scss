@@ -1,5 +1,4 @@
-// _header.scss
-@use 'mixins'as *;
+@use 'mixins' as *;
 @use 'variables' as *;
 
 header {
@@ -80,3 +79,63 @@ p {
   margin-bottom: 35px;
 }
 
+/* ------------------------ */
+/* RESPONSIVE STYLES FOR MOBILE */
+/* ------------------------ */
+
+@media (max-width: 400px) {
+  /* HEADER */
+  .header-txt {
+    padding: 20px 10px; /* Reducir padding para pantallas pequeñas */
+  }
+
+  .header-txt h1 {
+    font-size: 30px; /* Reducir tamaño del título */
+    margin-bottom: 10px;
+  }
+
+  span {
+    font-size: 16px; /* Reducir tamaño del span */
+  }
+
+  p {
+    font-size: 14px; /* Reducir tamaño del párrafo */
+    margin-bottom: 25px;
+  }
+
+  /* MENU */
+  .menu {
+    padding: 10px 15px;
+  }
+
+  .menu .navbar ul {
+    display: flex;
+    flex-direction: column; /* Hacer que los links se apilen */
+    gap: 10px;
+  }
+
+  .menu .navbar ul li a {
+    padding: 10px 15px; /* Reducir padding de los links */
+    font-size: 16px; /* Reducir tamaño de texto de los links */
+  }
+
+  /* LOGO */
+  .logo {
+    font-size: 20px; /* Reducir el tamaño del logo en móviles */
+  }
+
+  /* MENU ICON */
+  .menu-icono {
+    display: block; /* Mostrar el icono del menú */
+    width: 35px;
+  }
+
+  .menu label {
+    display: block; /* Mostrar el label del menú hamburguesa */
+  }
+
+  /* HIDE NAVBAR UNTIL MENU IS TOGGLED */
+  #menu:checked ~ .navbar {
+    display: flex; /* Mostrar el menú solo cuando está activo */
+  }
+}
