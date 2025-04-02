@@ -42,6 +42,29 @@ a {
   color: rgb(44, 62, 80);
 }
 
+body {
+  background-color: #f4f4f9; /* Color inicial */
+  transition: background-color 1s ease; /* Efecto de transición */
+}
+
+body:focus-within {
+  background-color: #ffffff; /* Color durante la navegación */
+}
+
+/* Definir la animación de desvanecimiento */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Aplicar la animación a la página */
+body {
+  animation: fadeIn 1s ease-out; /* Desvanecimiento cuando se carga la página */
+}
+
 header {
   background-color: rgb(236, 240, 241);
   display: flex;
