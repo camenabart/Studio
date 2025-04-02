@@ -13,6 +13,20 @@
     padding-bottom: 0rem !important;
   }
 }
+@media (max-width: 400px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Fondo para que no se superponga visualmente */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+  }
+  /* Empuja el contenido hacia abajo cuando el menú está abierto */
+  .navbar-collapse.show {
+    position: relative;
+  }
+}
 /* Usar el alias 'v' para acceder a las variables */
 * {
   margin: 0;
@@ -82,7 +96,6 @@ header {
 
 .menu .navbar ul li a {
   font-size: 18px;
-  padding: 20px;
   color: rgb(189, 195, 199);
   display: block;
   font-weight: 600;
@@ -157,8 +170,11 @@ p {
   }
   .menu .navbar ul {
     display: flex;
-    flex-direction: column; /* Hacer que los links se apilen */
+    flex-direction: column;
     gap: 10px;
+    border: 2px solid rgb(26, 188, 156); /* Agrega el borde de color */
+    padding: 10px; /* Opcional, para que el borde no quede pegado */
+    border-radius: 5px; /* Opcional, para esquinas redondeadas */
   }
   .menu .navbar ul li a {
     padding: 10px 15px; /* Reducir padding de los links */

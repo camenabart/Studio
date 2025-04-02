@@ -29,7 +29,6 @@ header {
 
 .menu .navbar ul li a {
   font-size: 18px;
-  padding: 20px;
   color: $light-gray;
   display: block;
   font-weight: 600;
@@ -107,13 +106,15 @@ p {
   .menu {
     padding: 10px 15px;
   }
-
-  .menu .navbar ul {
-    display: flex;
-    flex-direction: column; /* Hacer que los links se apilen */
-    gap: 10px;
-  }
-
+    .menu .navbar ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: 2px solid $secondary-color; /* Agrega el borde de color */
+      padding: 10px; /* Opcional, para que el borde no quede pegado */
+      border-radius: 5px; /* Opcional, para esquinas redondeadas */
+    }
+  
   .menu .navbar ul li a {
     padding: 10px 15px; /* Reducir padding de los links */
     font-size: 16px; /* Reducir tamaño de texto de los links */
@@ -139,3 +140,7 @@ p {
     display: flex; /* Mostrar el menú solo cuando está activo */
   }
 }
+
+
+
+

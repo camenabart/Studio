@@ -64,3 +64,20 @@
     }
   }
   
+
+  @media (max-width: 400px) {
+    .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: white; /* Fondo para que no se superponga visualmente */
+      z-index: 1000; /* Asegura que esté sobre otros elementos */
+    }
+  
+    /* Empuja el contenido hacia abajo cuando el menú está abierto */
+    .navbar-collapse.show {
+      position: relative;
+    }
+  }
+  
