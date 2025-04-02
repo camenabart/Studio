@@ -29,3 +29,18 @@
 
 }
 
+
+#mi-foto1{
+ 
+  transform: translateY(100px); /* Se posiciona más abajo */
+ 
+  object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
+  animation: fadeInUp 1.5s ease-out forwards; /* Aplicar animación */
+ 
+  @media (max-width: 400px) {
+    width: 280px; /* Reduce el tamaño de la imagen */
+    height: 280px; /* Mantiene la imagen cuadrada */
+    transform: translateY(50px); /* Ajusta la posición para que no se vea demasiado abajo */
+   
+  }
+}
