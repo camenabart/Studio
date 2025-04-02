@@ -167,12 +167,10 @@
 
 
 .estudios{
-  border-top-left-radius: 50% 50%;
-  border-top-right-radius: 50% 50%;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 
   @media (max-width: 400px) {
-    border-top-left-radius: 0% 0%;
-    border-top-right-radius: 0% 0%;
+
   }
 }
