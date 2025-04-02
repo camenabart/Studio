@@ -102,45 +102,43 @@ p {
     margin-bottom: 25px;
   }
 
-  /* MENU */
-  .menu {
-    padding: 10px 15px;
-  }
-    .menu .navbar ul {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      border: 2px solid $secondary-color; /* Agrega el borde de color */
-      padding: 10px; /* Opcional, para que el borde no quede pegado */
-      border-radius: 5px; /* Opcional, para esquinas redondeadas */
-    }
-  
-  .menu .navbar ul li a {
-    padding: 10px 15px; /* Reducir padding de los links */
-    font-size: 16px; /* Reducir tamaño de texto de los links */
-  }
-
   /* LOGO */
   .logo {
     font-size: 20px; /* Reducir el tamaño del logo en móviles */
   }
 
-  /* MENU ICON */
-  .menu-icono {
-    display: block; /* Mostrar el icono del menú */
-    width: 35px;
+
   }
 
-  .menu label {
-    display: block; /* Mostrar el label del menú hamburguesa */
-  }
 
-  /* HIDE NAVBAR UNTIL MENU IS TOGGLED */
-  #menu:checked ~ .navbar {
-    display: flex; /* Mostrar el menú solo cuando está activo */
-  }
+
+
+
+
+  @media (max-width: 400px) {
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row; /* Asegura que los elementos estén en línea */
+        gap: 15px; /* Espaciado entre los ítems */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .navbar-nav .nav-item {
+        display: inline-block;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    .menu .navbar ul li a {
+      font-size: 14px;
+    }
 }
-
-
-
-
