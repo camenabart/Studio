@@ -1,5 +1,8 @@
 @use 'variables' as v;
+@use 'mixins' as *;
+@use 'sass:color';
 
+// Reset y estilos base
 * {
   margin: 0;
   padding: 0;
@@ -8,38 +11,68 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: v.$bg-color;
   color: v.$secondary-color;
-  transition: background-color 1s ease;
-  animation: fadeIn 1s ease-out;
+  line-height: 1.6;
+  transition: background-color v.$transition-normal;
+  @include fade-in;
 }
 
-img {
-  max-width: 100%;
+// Tipografía
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: v.$spacing-md;
+  color: v.$primary-color;
 }
 
-.body1 {
-  font-family: "Poppins", sans-serif;
-  background-color: v.$white-color;
-  color: v.$secondary-color;
+p {
+  margin-bottom: v.$spacing-md;
 }
 
+// Enlaces
 a {
   color: v.$secondary-color;
+  transition: color v.$transition-normal;
+  
+  &:hover {
+    color: color.adjust(v.$secondary-color, $lightness: -10%);
+  }
 }
 
-body:focus-within {
-  background-color: v.$white-color;
+// Imágenes
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Definir la animación de desvanecimiento */
+// Contenedores
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 v.$spacing-md;
+}
+
+// Utilidades
+.text-center { text-align: center; }
+.mt-1 { margin-top: v.$spacing-sm; }
+.mt-2 { margin-top: v.$spacing-md; }
+.mt-3 { margin-top: v.$spacing-lg; }
+.mb-1 { margin-bottom: v.$spacing-sm; }
+.mb-2 { margin-bottom: v.$spacing-md; }
+.mb-3 { margin-bottom: v.$spacing-lg; }
+
+// Animaciones
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

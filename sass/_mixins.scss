@@ -8,13 +8,12 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all v.$transition-normal;
   border-bottom-left-radius: 50% 50%;
   border-bottom-right-radius: 50% 50%;
-  transition: all 0.6s ease-in-out;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: v.$shadow-md;
   background-color: v.$white-color;
-  padding: 80px 0px 40px;
+  padding: v.$spacing-xl 0 v.$spacing-lg;
 }
 
 // RESPONSIVE STYLES FOR SMALLER SCREENS (Phone Version)
@@ -49,14 +48,83 @@
 }
 
 @mixin respond($breakpoint) {
-  @if $breakpoint == 'small' {
-    @media (max-width: 600px) {
-      @content;
-    }
+  @if $breakpoint == 'sm' {
+    @media (max-width: v.$breakpoint-sm) { @content; }
   }
-  @else if $breakpoint == 'medium' {
-    @media (max-width: 768px) {
-      @content;
-    }
+  @else if $breakpoint == 'md' {
+    @media (max-width: v.$breakpoint-md) { @content; }
   }
+  @else if $breakpoint == 'lg' {
+    @media (max-width: v.$breakpoint-lg) { @content; }
+  }
+  @else if $breakpoint == 'xl' {
+    @media (max-width: v.$breakpoint-xl) { @content; }
+  }
+}
+
+// Mixin para flexbox
+@mixin flex($direction: row, $justify: center, $align: center, $gap: v.$spacing-md) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Mixin para grid
+@mixin grid($columns: 1, $gap: v.$spacing-md) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Mixin para botones
+@mixin button-base {
+  padding: v.$spacing-sm v.$spacing-lg;
+  border-radius: v.$border-radius-md;
+  font-weight: 600;
+  transition: all v.$transition-normal;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+// Mixin para cards
+@mixin card-base {
+  background-color: v.$white-color;
+  border-radius: v.$border-radius-md;
+  box-shadow: v.$shadow-sm;
+  padding: v.$spacing-lg;
+  transition: all v.$transition-normal;
+  
+  &:hover {
+    box-shadow: v.$shadow-md;
+    transform: translateY(-2px);
+  }
+}
+
+// Mixin para animaciones
+@mixin fade-in($duration: 0.5s) {
+  animation: fadeIn $duration ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+// Mixin para hover effects
+@mixin hover-lift {
+  transition: transform v.$transition-normal;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+// Mixin para textos
+@mixin text-style($size: 1rem, $weight: 400, $color: v.$primary-color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
 }
