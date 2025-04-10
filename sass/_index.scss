@@ -2,6 +2,7 @@
 @use 'mixins' as m;
 @use 'bottons' as *;
 @use 'animaciones' as *;
+@use 'sass:color';
 
 .project-card {
     position: relative;
@@ -142,7 +143,7 @@
     &:hover {
         transform: translateY(-3px);
         box-shadow: v.$shadow-md;
-        background-color: darken(v.$secondary-color, 10%);
+        background-color: color.adjust(v.$secondary-color, $lightness: -10%);
     }
 }
 

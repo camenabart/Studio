@@ -1,5 +1,6 @@
 @use 'variables' as v;
 @use 'mixins' as m;
+@use 'sass:color';
 
 header {
     min-height: 100vh;
@@ -36,7 +37,8 @@ header {
                     &:hover {
                         transform: translateY(-2px);
                         box-shadow: v.$shadow-md;
-                        background-color: darken(v.$secondary-color, 5%);
+                        $darker-color: color.adjust(v.$secondary-color, $lightness: -5%);
+                        background-color: $darker-color;
                     }
                 }
             }
