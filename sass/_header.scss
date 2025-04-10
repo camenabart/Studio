@@ -1,5 +1,5 @@
 @use 'mixins' as *;
-@use 'variables' as *;
+@use 'variables' as v;
 
 header {
   @include header-base;
@@ -16,7 +16,7 @@ header {
 }
 
 .logo {
-  color: $primary-color !important;
+  color: v.$primary-color !important;
   font-size: 25px;
   font-weight: 800;
   text-transform: uppercase;
@@ -29,18 +29,18 @@ header {
 
 .menu .navbar ul li a {
   font-size: 18px;
-  color: $light-gray;
+  color: v.$light-gray;
   display: block;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .menu .navbar ul li a:hover {
-  color: $secondary-color;
+  color: v.$secondary-color;
 }
 
 .menu .navbar ul li a:active {
-  color: $secondary-color;
+  color: v.$secondary-color;
 }
 
 #menu {
@@ -64,13 +64,13 @@ header {
 .header-txt h1 {
   font-size: 55px;
   line-height: 1;
-  color: $primary-color;
+  color: v.$primary-color;
   margin-bottom: 25px;
   font-weight: 900;
 }
 
 span {
-  color: $secondary-color;
+  color: v.$secondary-color;
 }
 
 p {

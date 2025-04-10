@@ -13,7 +13,6 @@
     padding-bottom: 0rem !important;
   }
 }
-/* Usar el alias 'v' para acceder a las variables */
 * {
   margin: 0;
   padding: 0;
@@ -24,8 +23,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(236, 240, 241); /* Usar 'v.$primary-color' para acceder a la variable */
-  color: rgb(44, 62, 80); /* Lo mismo aquí */
+  background-color: rgb(248, 249, 250);
+  color: rgb(26, 188, 156);
+  transition: background-color 1s ease;
+  animation: fadeIn 1s ease-out;
 }
 
 img {
@@ -34,21 +35,16 @@ img {
 
 .body1 {
   font-family: "Poppins", sans-serif;
-  background-color: white;
-  color: rgb(44, 62, 80);
+  background-color: rgb(255, 255, 255);
+  color: rgb(26, 188, 156);
 }
 
 a {
-  color: rgb(44, 62, 80);
-}
-
-body {
-  background-color: #f4f4f9; /* Color inicial */
-  transition: background-color 1s ease; /* Efecto de transición */
+  color: rgb(26, 188, 156);
 }
 
 body:focus-within {
-  background-color: #ffffff; /* Color durante la navegación */
+  background-color: rgb(255, 255, 255);
 }
 
 /* Definir la animación de desvanecimiento */
@@ -60,16 +56,11 @@ body:focus-within {
     opacity: 1;
   }
 }
-/* Aplicar la animación a la página */
-body {
-  animation: fadeIn 1s ease-out; /* Desvanecimiento cuando se carga la página */
-}
-
 header {
   background-color: rgb(236, 240, 241);
   display: flex;
   align-items: center;
-  justify-content: center; /* Centrado horizontal */
+  justify-content: center;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;

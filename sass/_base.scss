@@ -1,4 +1,4 @@
-@use 'variables' as v; /* Usar el alias 'v' para acceder a las variables */
+@use 'variables' as v;
 
 * {
   margin: 0;
@@ -10,8 +10,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: v.$header-bg-color; /* Usar 'v.$primary-color' para acceder a la variable */
-  color: v.$primary-color; /* Lo mismo aquí */
+  background-color: v.$bg-color;
+  color: v.$secondary-color;
+  transition: background-color 1s ease;
+  animation: fadeIn 1s ease-out;
 }
 
 img {
@@ -20,25 +22,17 @@ img {
 
 .body1 {
   font-family: "Poppins", sans-serif;
-  background-color: white;
-  color: rgb(44, 62, 80);
+  background-color: v.$white-color;
+  color: v.$secondary-color;
 }
 
-a{
-  color: rgb(44, 62, 80);
-}
-
-
-
-body {
-  background-color: #f4f4f9; /* Color inicial */
-  transition: background-color 1s ease; /* Efecto de transición */
+a {
+  color: v.$secondary-color;
 }
 
 body:focus-within {
-  background-color: #ffffff; /* Color durante la navegación */
+  background-color: v.$white-color;
 }
-
 
 /* Definir la animación de desvanecimiento */
 @keyframes fadeIn {
@@ -48,9 +42,4 @@ body:focus-within {
   to {
     opacity: 1;
   }
-}
-
-/* Aplicar la animación a la página */
-body {
-  animation: fadeIn 1s ease-out; /* Desvanecimiento cuando se carga la página */
 }
