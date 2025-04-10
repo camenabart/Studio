@@ -1,5 +1,5 @@
 @use 'variables' as v;
-@use 'mixins' as *;
+@use 'mixins' as m;
 @use 'sass:color';
 
 // Reset y estilos base
@@ -17,16 +17,17 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: v.$bg-color;
-  color: v.$secondary-color;
+  color: v.$primary-color;
   line-height: 1.6;
   transition: background-color v.$transition-normal;
-  @include fade-in;
+  @include m.fade-in;
 }
 
 // Tipografía
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: v.$spacing-md;
@@ -34,7 +35,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+  font-family: 'Poppins', sans-serif;
   margin-bottom: v.$spacing-md;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 // Enlaces

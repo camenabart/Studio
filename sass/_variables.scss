@@ -1,15 +1,17 @@
 // Colores principales
-$primary-color: rgb(44, 62, 80); /* Azul oscuro elegante */
-$secondary-color: rgb(26, 188, 156); /* Verde esmeralda vibrante */
-$bg-color: rgb(248, 249, 250); /* Fondo claro y suave */
-$header-bg-color: rgb(236, 240, 241); /* Fondo suave para el header */
+$primary-color: rgb(45, 55, 72); /* Color oscuro para texto - un poco más azulado */
+$secondary-color: rgb(236, 72, 153); /* Rosa más vibrante */
+$accent-color: rgb(167, 139, 250); /* Púrpura suave */
+$bg-color: rgb(255, 255, 255); /* Blanco puro */
+$header-bg-color: rgb(255, 255, 255); /* Fondo blanco */
+$header-gradient: linear-gradient(135deg, rgb(100, 116, 139) 0%, rgb(71, 85, 105) 100%); /* Gradiente slate */
 $white-color: rgb(255, 255, 255); /* Blanco puro */
-$light-gray: rgb(189, 195, 199); /* Gris suave y moderno */
-$highlight-color: rgb(26, 188, 156); /* Amarillo dorado sofisticado */
+$light-gray: rgb(226, 232, 240); /* Gris azulado suave */
+$highlight-color: rgb(236, 72, 153); /* Rosa para destacados */
 
 // Sombras
-$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
 $shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 
 // Transiciones
